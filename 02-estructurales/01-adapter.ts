@@ -10,3 +10,12 @@
  *
  * https://refactoring.guru/es/design-patterns/adapter
  */
+
+// import { LocalLogger } from "./adapter-files/local-logger.ts";
+import { DenoLoggerAdapter } from "./adapter-files/logger-adapter.ts";
+
+const logger = new DenoLoggerAdapter("01-adapter.ts");
+
+logger.writeLog("Hello World");
+logger.writeWarning("Warning");
+logger.writeError("Error");
