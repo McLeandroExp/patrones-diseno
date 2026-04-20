@@ -9,3 +9,12 @@
  *
  * https://refactoring.guru/es/design-patterns/singleton
  */
+
+import { configManager } from "./singleton/config-manager.ts";
+
+configManager.setConfig("theme", "dark");
+configManager.setConfig("language", "es");
+
+console.log(configManager.getConfig("theme"));
+console.log(configManager.getConfig("language"));
+console.log(configManager.getAllConfig());
